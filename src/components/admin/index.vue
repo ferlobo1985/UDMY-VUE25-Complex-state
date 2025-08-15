@@ -41,7 +41,7 @@
   import { useCounterStore } from '@/store/counter';
   const store = useCounterStore();
 
-  const count = computed(()=> store.counter)
+  const count = computed(()=> store.getCount)
   const add = () => {
     store.counter++
   }

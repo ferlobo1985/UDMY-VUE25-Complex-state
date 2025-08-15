@@ -14,6 +14,13 @@
           >
             -
           </button>
+          <button
+             type="button" 
+             class="btn btn-outline-secondary btn-lg px-4"
+             @click="getPrizeHandler"
+          >
+            Get prize
+          </button>
         </div>
       </div>
     </div>
@@ -24,12 +31,16 @@
   import { useCounterStore } from '@/store/counter';
   const store = useCounterStore();
 
-  const count = computed(()=> store.counter)
+  const count = computed(()=> store.getCount)
   const add = () => {
     store.counter++
   }
   const subtract = () => {
     store.counter--
+  }
+  const getPrizeHandler = () => {
+    let value = store.getPrize;
+    alert(`${value.prize} & ${value.attempts}`)
   }
 
 </script>
