@@ -49,9 +49,10 @@ export const useCounterStore = defineStore('counter',{
             try{
                 const response = await axios.get(`https://jsonplaceholder.typicode.com/posts?&_limit=${limit}`);
                 this.add();
-                console.log(this.getCount)
+                //console.log(this.getCount)
 
                 this.posts = response.data
+                return response.data;
             } catch(error){
                 console.log(error)
             }

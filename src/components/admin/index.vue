@@ -66,4 +66,11 @@
     })
   }
 
+  // store.$subscribe((mutation, state)=>{
+  //   console.log(state)
+  //   console.log(mutation.type)
+  //   console.log(mutation.storeId)
+  //   console.log(mutation.payload)
+  // },{detached:true})
+
 </script>
